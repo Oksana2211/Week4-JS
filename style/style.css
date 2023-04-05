@@ -2,3 +2,29 @@
   margin: 2%;
   font-size: 1.6rem;
 }
+.block {
+  width: 50%;
+  min-height: 25vh;
+  background-color: rgba(21, 83, 155, 0.6);
+}
+.block__heading {
+  font-size: 1.9rem;
+  color: rgb(255, 255, 255);
+  text-align: center;
+  padding-top: 2%;
+}
+.block__text {
+  color: #e4fff9;
+  padding-left: 18%;
+}
+.block__input {
+  margin-left: 18%;
+  margin-top: 2%;
+  background-color: rgba(217, 234, 255, 0.7);
+  border-radius: 5px;
+  border: 1px dashed #e4fff9;
+}
+.block__input_comment {
+  min-height: 15vh;
+  margin-bottom: 5%;
+}
