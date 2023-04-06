@@ -17,6 +17,14 @@
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 1fr;
+  
+}
+.column {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr;
+  justify-items: center;
+  padding-right: 18%;
 }
 .column__text {
   color: #e4fff9;
@@ -34,6 +42,7 @@
   color: rgba(21, 83, 155, 0.6);
 }
 .column__input_comment {
+  min-width: 16vw;
   min-height: 15vh;
   margin-bottom: 5%;
 }
@@ -49,6 +58,15 @@
   box-shadow: 5px 5px 5px -1px rgba(2, 23, 39, 0.61) inset;
 }
 .comment {
+  font-size: 1.3rem;
+  max-width: 15vw;
+  min-height: 20vh;
   background: transparent;
   border: none;
+  padding: 0%;
+}
+.user-photo {
+padding-top: 10%;
+width: 6vw;
+height: auto;
 }
