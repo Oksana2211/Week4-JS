@@ -1,6 +1,6 @@
 .root {
   margin: 2%;
-  font-size: 1.6rem;
+  font-size: 1.5rem;
 }
 .block {
   width: 50%;
@@ -13,18 +13,42 @@
   text-align: center;
   padding-top: 2%;
 }
-.block__text {
+.block__column {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr;
+}
+.column__text {
   color: #e4fff9;
   padding-left: 18%;
 }
-.block__input {
+.column__input {
   margin-left: 18%;
   margin-top: 2%;
   background-color: rgba(217, 234, 255, 0.7);
   border-radius: 5px;
   border: 1px dashed #e4fff9;
 }
-.block__input_comment {
+.column__input::placeholder {
+  font-size: 1.3rem;
+  color: rgba(21, 83, 155, 0.6);
+}
+.column__input_comment {
   min-height: 15vh;
   margin-bottom: 5%;
+}
+.btn {
+  width: 8vw;
+  height: 2.5vw;
+  background-color: rgba(8, 41, 82, 0.7);
+  border: 1px solid #e4fff9;
+  color: #e4fff9;
+  border-radius: 20vw;
+  margin-bottom: 5%;
+  margin-left: 18%;
+  box-shadow: 5px 5px 5px -1px rgba(2, 23, 39, 0.61) inset;
+}
+.comment {
+  background: transparent;
+  border: none;
 }

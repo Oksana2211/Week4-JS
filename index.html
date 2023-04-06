@@ -60,10 +60,18 @@ console.log("(2,3): "    + str.substr(2,3));<br />
     </section>
     <section class="block">
       <h3 class="block__heading">Сервис комментариев со спам фильтром</h3>
-      <p class="block__text">Оставьте ваш комментарий</p>
-      <input class="block__input" type="text"><br />
-      <input class="block__input" type="text"><br />
-      <input class="block__input block__input_comment" type="text"><br />
+      <div class="block__column">
+        <div><p class="column__text">Оставьте ваш комментарий</p>
+      <input class="column__input" type="text" placeholder="Введите ваше ФИО"><br />
+      <input class="column__input" type="text" placeholder="Введите ссылку вашего аватара"><br />
+      <input class="column__input column__input_comment" type="text" placeholder="Оставьте комментарий"><br />
+      <button class="btn">Отправить</button>
+    </div>
+    <div>
+      <p class="column__text">Чат</p>
+      <input class="comment" type="text" disabled>
+    </div>
+  </div>
     </section>
 </div>
   <script src="index.js"></script>
