@@ -47,7 +47,7 @@
   margin-bottom: 5%;
 }
 .btn {
-  width: 8vw;
+  min-width: 8vw;
   height: 2.5vw;
   background-color: rgba(8, 41, 82, 0.7);
   border: 1px solid #e4fff9;
@@ -69,4 +69,17 @@
 padding-top: 10%;
 width: 6vw;
 height: auto;
+}
+.block1 {
+  margin-top: 2%;
+  width: 20%;
+  min-height: 20vh;
+}
+.input-anti-tag {
+margin: 2%;
+min-width: 20vw;
+min-height: 8vh;
+}
+.btn1 {
+margin-left: 2%;
 }
