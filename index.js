@@ -4,6 +4,7 @@ let userComment = document.querySelectorAll('textarea')[0];//поле для в�
 
 let photo = document.querySelector('.user-photo');//контейнер для вывода фото 
 let userChat = document.querySelectorAll('textarea')[1];//контейнер для вывода ФИО и комментария 
+let commentDate = document.querySelectorAll('textarea')[2]; //контейнер для вывода даты
 
 function sending(){ 
 let userNameV = userName.value; // введенное ФИО записали в переменную
@@ -29,7 +30,7 @@ photo.innerHTML = `<img class="user-photo" src=${userPhotoV} alt="фото по�
 
 let userCommentV = userComment.value.toLowerCase(); // из поля ввода берем комментарий от пользователя и записываем в переменную
 
-if(userCommentV.includes('viagra')){ //функциядля проверки на спам
+if(userCommentV.includes('viagra')){ //функция для проверки на спам
 userCommentV = userCommentV.replace(/viagra/gi, "***");
 userChat.value =`
 ${userNameV}
@@ -45,7 +46,17 @@ userChat.value =`
 ${userNameV}
 ${userCommentV}`
 }// после проверки выводим имя и комментарий в соответствующий контейнер
+
+
+let now = new Date(); // текущую дату записываем в переменную 
+now = String(now); //преобразуем в строку
+let nowD = now.slice(0,25) // и вырезаем нужные показания
+commentDate.value =`${nowD}` //выводим время и дату в контейнер
+
 }
+
+
+
 
 
 

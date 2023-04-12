@@ -62,6 +62,15 @@ console.log("(2,3): "    + str.substr(2,3));<br />
       <h3 class="block__heading">Сервис комментариев со спам фильтром</h3>
       <div class="block__column">
         <div><p class="column__text">Оставьте ваш комментарий</p>
+          <div class="check">
+    <p>Показывать ваше имя?</p>
+    <div>
+      <input type="checkbox" checked>
+      <label>Да</label>
+      <input type="checkbox">
+      <label>Нет</label>
+    </div>
+  </div>
       <input class="column__input" type="text" value="" placeholder="Введите ваше ФИО"><br />
       <input class="column__input" type="text" value="" placeholder="Введите ссылку вашего аватара"><br />
       <textarea class="column__input column__input_comment" type="text" value="" placeholder="Оставьте комментарий"></textarea><br />
@@ -71,7 +80,8 @@ console.log("(2,3): "    + str.substr(2,3));<br />
       <p class="column__text">Чат</p>
       <div class="column">
       <div class="user-photo"></div>
-      <textarea class="comment" type="text" value="" disabled></textarea>
+      <textarea class="comment column-texstarea" type="text" value="" disabled></textarea>
+      <textarea class="data column-texstarea" type="text" value="" disabled></textarea>
     </div>
     </div>
   </div>
