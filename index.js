@@ -25,8 +25,17 @@ userNameV =
 } else {userNameV =
 userNameV1[0].toUpperCase() + (userNameV1.slice(1)).toLowerCase();}
 
-let userPhotoV = userPhoto.value; // ссылку на фото из поля ввода записываем в переменную
-photo.innerHTML = `<img class="user-photo" src=${userPhotoV} alt="фото пользователя">`; // в контейнер для фото подставляем переменную со ссылкой от пользователя и выводим
+
+
+if(userPhoto.value == ' '){
+  let img = "https://mobimg.b-cdn.net/v3/fetch/74/74739e1770f31cdbfdde99cc0b2925d3.jpeg?w=1470&r=0.5625";
+photo.innerHTML = `<img class="user-photo" src=${img} alt="фото пользователя">`;
+} else {
+  let userPhotoV = userPhoto.value; // ссылку на фото из поля ввода записываем в переменную
+  photo.innerHTML = `<img class="user-photo" src=${userPhotoV} alt="фото пользователя">`;// в контейнер для фото подставляем переменную со ссылкой от пользователя и выводим
+}
+
+
 
 let userCommentV = userComment.value.toLowerCase(); // из поля ввода берем комментарий от пользователя и записываем в переменную
 
