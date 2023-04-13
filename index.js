@@ -6,9 +6,17 @@ let photo = document.querySelector('.user-photo');//контейнер для в
 let userChat = document.querySelectorAll('textarea')[1];//контейнер для вывода ФИО и комментария 
 let commentDate = document.querySelectorAll('textarea')[2]; //контейнер для вывода даты
 
+function clickNo() {
+userName.classList.add("ckeckNo");
+}
+function clickYes() {
+userName.classList.remove("ckeckNo");
+}
+
+
 function sending(){ 
 let userNameV = userName.value; // введенное ФИО записали в переменную
-let arr = userNameV.split(' '); //переведли строку с ФИО в массив
+let arr = userNameV.split(' '); //перевели строку с ФИО в массив
 let userNameV1 = arr[0]; 
 let userNameV2 = arr[1]; 
 let userNameV3 = arr[2];
