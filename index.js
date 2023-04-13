@@ -18,13 +18,16 @@ userNameV =
 (userNameV1[0].toUpperCase() + (userNameV1.slice(1)).toLowerCase())+`${' '}`
 +(userNameV2[0].toUpperCase() + (userNameV2.slice(1)).toLowerCase())+`${' '}`
 +(userNameV3[0].toUpperCase() + (userNameV3.slice(1)).toLowerCase());
-} else if (arr.length ===2){
+} else if (arr.length === 2){
   userNameV =
 (userNameV1[0].toUpperCase() + (userNameV1.slice(1)).toLowerCase())+`${' '}`
 +(userNameV2[0].toUpperCase() + (userNameV2.slice(1)).toLowerCase());
-} else {userNameV =
-userNameV1[0].toUpperCase() + (userNameV1.slice(1)).toLowerCase();}
-
+} else if (arr.length === 1){
+userNameV =
+userNameV1[0].toUpperCase() + (userNameV1.slice(1)).toLowerCase();
+} else {
+  userNameV = "username";
+}
 
 
 if(userPhoto.value == ''){
