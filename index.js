@@ -1,5 +1,5 @@
-let userName = document.querySelectorAll('input')[0]; //поле для ввода имени
-let userPhoto = document.querySelectorAll('input')[1]; //поле для ввода ссылки на фото
+let userName = document.querySelectorAll('input')[2]; //поле для ввода имени
+let userPhoto = document.querySelectorAll('input')[3]; //поле для ввода ссылки на фото
 let userComment = document.querySelectorAll('textarea')[0];//поле для ввода комментария
 
 let photo = document.querySelector('.user-photo');//контейнер для вывода фото 
@@ -27,9 +27,8 @@ userNameV1[0].toUpperCase() + (userNameV1.slice(1)).toLowerCase();}
 
 
 
-if(userPhoto.value == ' '){
-  let img = "https://mobimg.b-cdn.net/v3/fetch/74/74739e1770f31cdbfdde99cc0b2925d3.jpeg?w=1470&r=0.5625";
-photo.innerHTML = `<img class="user-photo" src=${img} alt="фото пользователя">`;
+if(userPhoto.value == ''){
+photo.innerHTML = `<img class="user-photo" src="/img/1.png" alt="фото пользователя">`;
 } else {
   let userPhotoV = userPhoto.value; // ссылку на фото из поля ввода записываем в переменную
   photo.innerHTML = `<img class="user-photo" src=${userPhotoV} alt="фото пользователя">`;// в контейнер для фото подставляем переменную со ссылкой от пользователя и выводим
