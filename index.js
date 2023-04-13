@@ -28,7 +28,15 @@ userNameV1[0].toUpperCase() + (userNameV1.slice(1)).toLowerCase();}
 
 
 if(userPhoto.value == ''){
-photo.innerHTML = `<img class="user-photo" src="/img/1.png" alt="фото пользователя">`;
+let randomImage = new Array(); //записали картинки в массив
+randomImage[0]= "/img/1.png";
+randomImage[1]= "/img/2.png";
+randomImage[2]= "/img/3.png";
+randomImage[3]= "/img/4.png";
+randomImage[4]= "/img/5.png";
+randomImage[5]= "/img/6.png";
+let number = Math.floor(Math.random()*randomImage.length); 
+photo.innerHTML = `<img class="user-photo" src=${randomImage[number]} alt="фото пользователя">`; //выводим рандомную картинку из массива в контейнер для фото
 } else {
   let userPhotoV = userPhoto.value; // ссылку на фото из поля ввода записываем в переменную
   photo.innerHTML = `<img class="user-photo" src=${userPhotoV} alt="фото пользователя">`;// в контейнер для фото подставляем переменную со ссылкой от пользователя и выводим
