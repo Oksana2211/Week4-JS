@@ -13,7 +13,6 @@ function clickYes() {
 userName.classList.remove("ckeckNo");
 }
 
-
 function sending(){ 
 let userNameV = userName.value; // введенное ФИО записали в переменную
 let arr = userNameV.split(' '); //перевели строку с ФИО в массив
@@ -21,7 +20,8 @@ let userNameV1 = arr[0];
 let userNameV2 = arr[1]; 
 let userNameV3 = arr[2];
 
-if(arr.length >=3) { // функция для проверки и вывода имени
+if (userName.value === '') {userNameV = "username"  // функция для проверки и вывода имени
+} else if(arr.length >=3) { 
 userNameV =
 (userNameV1[0].toUpperCase() + (userNameV1.slice(1)).toLowerCase())+`${' '}`
 +(userNameV2[0].toUpperCase() + (userNameV2.slice(1)).toLowerCase())+`${' '}`
@@ -30,13 +30,10 @@ userNameV =
   userNameV =
 (userNameV1[0].toUpperCase() + (userNameV1.slice(1)).toLowerCase())+`${' '}`
 +(userNameV2[0].toUpperCase() + (userNameV2.slice(1)).toLowerCase());
-} else if (arr.length === 1){
+} else {
 userNameV =
 userNameV1[0].toUpperCase() + (userNameV1.slice(1)).toLowerCase();
-} else {
-  userNameV = "username";
 }
-
 
 if(userPhoto.value == ''){
 let randomImage = new Array(); //записали картинки в массив
@@ -52,8 +49,6 @@ photo.innerHTML = `<img class="user-photo" src=${randomImage[number]} alt="фо�
   let userPhotoV = userPhoto.value; // ссылку на фото из поля ввода записываем в переменную
   photo.innerHTML = `<img class="user-photo" src=${userPhotoV} alt="фото пользователя">`;// в контейнер для фото подставляем переменную со ссылкой от пользователя и выводим
 }
-
-
 
 let userCommentV = userComment.value.toLowerCase(); // из поля ввода берем комментарий от пользователя и записываем в переменную
 
