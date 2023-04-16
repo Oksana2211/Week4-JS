@@ -44,10 +44,10 @@ randomImage[3]= "/img/4.png";
 randomImage[4]= "/img/5.png";
 randomImage[5]= "/img/6.png";
 let number = Math.floor(Math.random()*randomImage.length); 
-photo.innerHTML = `<img class="user-photo" src=${randomImage[number]} alt="фото пользователя">`; //выводим рандомную картинку из массива в контейнер для фото
+photo.innerHTML = `<img class="user-photo" src="${randomImage[number]}" alt="фото пользователя">`; //выводим рандомную картинку из массива в контейнер для фото
 } else {
   let userPhotoV = userPhoto.value; // ссылку на фото из поля ввода записываем в переменную
-  photo.innerHTML = `<img class="user-photo" src=${userPhotoV} alt="фото пользователя">`;// в контейнер для фото подставляем переменную со ссылкой от пользователя и выводим
+  photo.innerHTML = `<img class="user-photo" src="${userPhotoV}" alt="фото пользователя">`;// в контейнер для фото подставляем переменную со ссылкой от пользователя и выводим
 }
 
 let userCommentV = userComment.value.toLowerCase(); // из поля ввода берем комментарий от пользователя и записываем в переменную
@@ -79,26 +79,36 @@ commentDate.value =`${nowD}` //выводим время и дату в конт
 
 /// задание со звездочкой 13 неделя
 function formatDate(date) {
-let now = new Date();
-let year = now.getFullYear();
-let day = now.getDate()-1;
-let month = now.getMonth();
-let hour = now.getHours();
-let minutes = now.getMinutes();
-let seconds = now.getSeconds();
-let yesterday =(`${day}.${'0'+month}.${year} ${hour}:${minutes}:${seconds}`);
 
-let newD = new Date() - date;
+let now = new Date(); // текущая дата
+
+let year = now.getFullYear(); //текущий год
+let day = now.getDate()-1; // дата на день назад
+let month = now.getMonth()+1; // текущий месяц
+
+function addZero(i) {
+  if (i < 10) {i = "0" + i} // для вывода времени в формате 11:05:09
+  return i;
+}
+let h = addZero(now.getHours());// часы
+let m = addZero(now.getMinutes());// минуты
+let s = addZero(now.getSeconds());// секунды
+let time = h + ":" + m + ":" + s; // текущее время
+
+let yesterday =(`${day}.0${month}.${year} ${time}`);
+
+let newD = new Date() - date; // date - параментр из условаия задачи (new Date - 1);(new Date - 30 * 1000);(new Date - 5 * 60 * 1000);(new Date - 86400 * 4 * 1000);
+
 if (newD <= 1) { console.log("прямо сейчас")}
 else if (newD > 1 && newD <= 30000 ){console.log("30 сек. назад")}
 else if (newD > 30000 && newD <= 300000)  {console.log("5 мин. назад")}
 else {console.log(yesterday)}
 }
-
-formatDate(new Date(new Date - 1));
-formatDate(new Date(new Date - 30 * 1000));
-formatDate(new Date(new Date - 5 * 60 * 1000));
-formatDate(new Date(new Date - 86400 * 4 * 1000));
+//условия задачи:
+formatDate(new Date(new Date - 1)); //"прямо сейчас"
+formatDate(new Date(new Date - 30 * 1000)); //"30 сек. назад"
+formatDate(new Date(new Date - 5 * 60 * 1000)); //"5 мин. назад"
+formatDate(new Date(new Date - 86400 * 4 * 1000)); // дата и время на день назад
 /////////////////////////
 
 
