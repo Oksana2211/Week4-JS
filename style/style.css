@@ -2,6 +2,9 @@
   margin: 2%;
   font-size: 1.5rem;
 }
+.img-hi {
+  max-width: 5vw;
+}
 .block {
   width: 50%;
   min-height: 25vh;

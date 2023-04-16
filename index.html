@@ -10,9 +10,11 @@
 </head>
 <body>
   <div class="root">
-  <section>
-    <h1>Приветствую</h1>
+    <section>
+      <h1>Приветствую<img class="img-hi" src="/img/6.png" alt="картинка притствие"></h1>
   <h2>Ответы на вопросы</h2>
+    </section>
+  <!-- <section>
      <ol>
       <li>Какие кавычки можно использовать для создания строк в JS и в чём разница между ними?</li>
       <p><i>Ответ:</i><br />Строку можно создать с помощью одинарных, двойных либо обратных кавычек. Одинарные и двойные кавычки работают, по сути, одинаково, а если использовать обратные кавычки, то в такую строку мы сможем вставлять произвольные выражения, обернув их в ${…}. Ещё одно преимущество обратных кавычек — они могут занимать более одной строки.</p>
@@ -57,6 +59,65 @@ const str = "abcdefghij"; <br />
 console.log("(2,3): "    + str.substr(2,3));<br />
 </li>
 <p><i>Ответ:</i><br />"(2,3): cde"</p>
+    </section> -->
+    <section>
+    <ol>
+      <li>Как создать дату 24 января 2021 года, 22 часа 51 минута? Временная зона — местная.</li>
+      <p><i>Ответ:</i><br />
+      let dateMsc = new Date(2021, 0, 24, 22, 51);<br />
+console.log(dateMsc);<br />
+</p>
+<li>Для чего предназначен метод getDay()?</li>
+      <p><i>Ответ:</i><br />
+      Метод getDay () возвращает порядковый номер дня недели указанной даты по местному времени, где 0 соответствует воскресенью.<br /></p>
+      <li>Как посчитать, сколько секунд осталось до завтра?</li>
+      <p><i>Ответ:</i><br />
+      function getSecondsToTomorrow() {<br />
+let now = new Date();<br />
+let hour = now.getHours();<br />
+let minutes = now.getMinutes();<br />
+let seconds = now.getSeconds();<br />
+let totalSecondsToday = (hour * 60 + minutes) * 60 + seconds;<br />
+let totalSecondsInADay = 86400;<br />
+return totalSecondsInADay - totalSecondsToday;<br />
+}<br />
+console.log(getSecondsToTomorrow()) <br /></p>
+<li>Для чего предназначен метод getDate()?</li>
+      <p><i>Ответ:</i><br />
+      Метод getDate () возвращает день месяца указанной даты по местному времени. <br /></p>
+      <li>Что выведет console.log(d) ?<br />
+        let d = new Date(2016, 2, 9);<br />
+console.log(d);
+      </li>
+      <p><i>Ответ:</i><br />
+      Mar 09 2016 00:00:00<br /></p>
+      <li>Что делает getTimezoneOffset() ?</li>
+      <p><i>Ответ:</i><br />
+      Метод getTimezoneOffset() возвращает смещение часового пояса относительно часового пояса UTC.<br /></p>
+      <li>Что выведет консоль?<br />
+        let date = new Date();<br />
+console.log(date.getUTCHours());
+      </li>
+      <p><i>Ответ:</i><br />
+      Метод getUTCHours() возвращает час (от 0 до 23) указанной даты и времени в соответствии с универсальным временем.<br /></p>
+      <li>Для чего предназначен метод getHours() объекта Date?</li>
+      <p><i>Ответ:</i><br />
+      Метод getHours () возвращает часы указанной даты по местному времени.<br /></p>
+      <li>Что выведет консоль?<br />
+        let d = new Date(); <br />
+let y =  d.getFullYear();<br />
+console.log(y);
+      </li>
+      <p><i>Ответ:</i><br />
+      Какой на данный момент год - 2023.<br /></p>
+      <li>В чём ошибка в коде?<br />
+        let y = new Date(); <br />
+let d = y.getDate();<br />
+console.log(d);
+      </li>
+      <p><i>Ответ:</i><br />
+      В коде нет ошибки (выводит текущий день).<br /></p>
+    </ol>
     </section>
     <section class="block">
       <h3 class="block__heading">Сервис комментариев со спам фильтром</h3>

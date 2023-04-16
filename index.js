@@ -69,7 +69,6 @@ ${userNameV}
 ${userCommentV}`
 }// после проверки выводим имя и комментарий в соответствующий контейнер
 
-
 let now = new Date(); // текущую дату записываем в переменную 
 now = String(now); //преобразуем в строку
 let nowD = now.slice(0,25) // и вырезаем нужные показания
@@ -78,11 +77,32 @@ commentDate.value =`${nowD}` //выводим время и дату в конт
 }
 
 
+/// задание со звездочкой 13 неделя
+function formatDate(date) {
+let now = new Date();
+let year = now.getFullYear();
+let day = now.getDate()-1;
+let month = now.getMonth();
+let hour = now.getHours();
+let minutes = now.getMinutes();
+let seconds = now.getSeconds();
+let yesterday =(`${day}.${'0'+month}.${year} ${hour}:${minutes}:${seconds}`);
+
+let newD = new Date() - date;
+if (newD <= 1) { console.log("прямо сейчас")}
+else if (newD > 1 && newD <= 30000 ){console.log("30 сек. назад")}
+else if (newD > 30000 && newD <= 300000)  {console.log("5 мин. назад")}
+else {console.log(yesterday)}
+}
+
+formatDate(new Date(new Date - 1));
+formatDate(new Date(new Date - 30 * 1000));
+formatDate(new Date(new Date - 5 * 60 * 1000));
+formatDate(new Date(new Date - 86400 * 4 * 1000));
+/////////////////////////
 
 
-
-
-/// задание со звездочкой
+/// задание со звездочкой 12 неделя
 let text1 = document.querySelectorAll('textarea')[2];
 let text2 = document.querySelectorAll('textarea')[3];
 
