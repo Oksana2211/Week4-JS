@@ -8,7 +8,9 @@ let commentDate = document.querySelectorAll('textarea')[2]; //контейнер
 
 function clickNo() {
 userName.classList.add("ckeckNo");
+userName.value = '';
 }
+
 function clickYes() {
 userName.classList.remove("ckeckNo");
 }
@@ -19,6 +21,7 @@ let arr = userNameV.split(' '); //перевели строку с ФИО в м�
 let userNameV1 = arr[0]; 
 let userNameV2 = arr[1]; 
 let userNameV3 = arr[2];
+
 
 if (userName.value === '') {userNameV = "username"  // функция для проверки и вывода имени
 } else if(arr.length >=3) { 
@@ -73,7 +76,6 @@ let now = new Date(); // текущую дату записываем в пер�
 now = String(now); //преобразуем в строку
 let nowD = now.slice(0,25) // и вырезаем нужные показания
 commentDate.value =`${nowD}` //выводим время и дату в контейнер
-
 }
 
 
